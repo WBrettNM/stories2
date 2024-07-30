@@ -4,7 +4,7 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
+    "build": "prisma generate && remix vite:build",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "netlify serve",
@@ -44,6 +44,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "postinstall": "prisma generate"
+  }
 }
